@@ -7,6 +7,7 @@ window.resizable(0,0)
 window.title("Rock Paper Scisors")
 
 
+# --- player choice ---
 def choice_to_number(choice):
     rps = {'rock': 0, 'paper': 1, 'scissor': 2}
     return rps[choice]
@@ -17,10 +18,11 @@ def number_to_choice(number):
     return rps[number]
 
 
+# --- cpu rng ---
 def random_computer_choice():
     return random.choice(['rock', 'paper', 'scissor'])
 
-
+# --- result ---
 def result(human_choice, comp_choice):
     global user_score
     global comp_score
@@ -36,7 +38,7 @@ def result(human_choice, comp_choice):
     else:
         comp_score += 1
         pr_res = "CPU won"
-
+    # --- result output window(area) ---
     text_area = Text(window, height=10, width=30)
     text_area.grid(column=2, row=1, rowspan=3)
 
@@ -48,7 +50,7 @@ def result(human_choice, comp_choice):
     answer = f" Your Choice: {uc} \n Computer's Choice : {cc} \n Result: {pr_res}\n Your Score : {u} \n Computer Score : {c}"
     text_area.insert(END, answer)
 
-
+# --- choices ---
 def rock():
     global user_choice
     global comp_choice
@@ -75,6 +77,7 @@ def scissor():
     comp_choice = random_computer_choice()
     result(user_choice, comp_choice)
 
+# --- reset game ---
 def reset():
     global btn1, btn2, btn3, user_score, comp_score, user_choice, comp_choice
     global text_area

@@ -8,6 +8,7 @@ window.title('Choose game')
 
 
 def main():
+    #--- buttons ---
     btn1 = Button(window, text="RPS", height=2, width=10, font=('arial', 20), command=m1)
     btn2 = Button(window, text="TTT", height=2, width=10, font=('arial', 20), command=m2)
 

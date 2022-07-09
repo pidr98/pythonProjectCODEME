@@ -9,7 +9,7 @@ window.title('Tic-Tac-Toe')
 clicked = True
 count = 0
 
-
+# --- check who won ---
 def check_if_won():
     winner = False
 
