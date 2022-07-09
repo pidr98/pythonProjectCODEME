@@ -1,6 +1,7 @@
 import random
 from tkinter import *
 
+# --- window ---
 window = Tk()
 window.resizable(0,0)
 window.title("Rock Paper Scisors")
