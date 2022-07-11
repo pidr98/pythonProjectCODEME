@@ -12,12 +12,6 @@ def choice_to_number(choice):
     rps = {'rock': 0, 'paper': 1, 'scissor': 2}
     return rps[choice]
 
-
-def number_to_choice(number):
-    rps = {0: 'rock', 1: 'paper', 2: 'scissor'}
-    return rps[number]
-
-
 # --- cpu rng ---
 def random_computer_choice():
     return random.choice(['rock', 'paper', 'scissor'])
