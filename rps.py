@@ -17,11 +17,11 @@ def random_computer_choice():
     return random.choice(['rock', 'paper', 'scissor'])
 
 # --- result ---
-def result(human_choice, comp_choice):
+def result(user_choice, comp_choice):
     global user_score
     global comp_score
 
-    user = choice_to_number(human_choice)
+    user = choice_to_number(user_choice)
     comp = choice_to_number(comp_choice)
 
     if user == comp:
